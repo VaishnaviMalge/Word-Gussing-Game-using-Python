@@ -1,0 +1,34 @@
+secret_word ="Avinash"
+guess =" "
+count = 0
+limit = 3
+out_of_guess = False
+Performance =" "
+
+while guess != secret_word and     not(out_of_guess):
+	
+		count += 1
+		if count <= limit:
+			guess = input("Enter secret word: ")
+		else:
+			out_of_guess = True
+	
+
+
+if out_of_guess :
+    print("You lost! \nYou have 0 number of chances remained.")
+else :
+    print(f"Congrats. You win! \nThe number of guess chances you used is {count}")
+    
+    
+if count == 1:
+    	Performance = "Excellent\n🤩"
+elif count == 2:
+	    Performance = "Very Good\n😊"
+elif count == 3:
+        Performance = "Good\n😌"   
+else:
+        Performance = "Poor\n😔"
+   
+print(f"Performance = {Performance}")
+    
